@@ -1,0 +1,152 @@
+.slider {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    padding: 20px;
+    height: auto;
+    margin-left: 20em;
+    margin-top: 10vh;
+    background-color: var(--fondo);
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* carousel.component.css */
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden;
+    color: var(--letra)
+  }
+  
+  .carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  
+  .carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .carousel-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+  }
+  
+  .carousel-item  {
+    border: solid var(--background) 3px;
+    padding: 40px;
+    border-radius: 25px;
+  }
+
+  .carousel-item img {
+    width: 100%;
+    height: 20em;
+  }
+  .prev {
+    left: 10px;
+  }
+  
+  .next {
+    right: 10px;
+  }
+  
+  .slider span:nth-child(1) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-image: linear-gradient(to right, transparent, var(--accent));
+    animation: animate-1 2s linear infinite;
+    z-index: 20;
+
+  }
+  @keyframes animate-1 {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+  .slider span:nth-child(2) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 3px;
+    height: 100%;
+    background-image: linear-gradient(to bottom, transparent, var(--accent));
+    animation: animate-2 2s linear infinite;
+    z-index: 20;
+    animation-delay: 1s;
+
+  }
+  @keyframes animate-2 {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(100%);
+    }
+  }
+
+  .slider span:nth-child(3) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-image: linear-gradient(to left, transparent, var(--accent));
+    animation: animate-3 2s linear infinite;
+    z-index: 20;
+    animation-delay: 2s;
+
+  }
+  @keyframes animate-3 {
+    100% {
+      transform: translateX(-100%);
+    }
+    0% {
+      transform: translateX(100%);
+    }
+  }
+
+  .slider span:nth-child(4) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background-image: linear-gradient(to top, transparent, var(--accent));
+    animation: animate-4 2s linear infinite;
+    z-index: 20;
+    animation-delay: 3s;
+
+  }
+  @keyframes animate-4 {
+    100% {
+      transform: translateY(-100%);
+    }
+    0% {
+      transform: translateY(100%);
+    }
+  }
