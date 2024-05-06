@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+    --fondo: #212121; /* Fondo principal */
+    --titulo: #eceff1; /* Color para títulos */
+    --background: #37474F; /* Color para backgrounds */
+    --letra: #fafafa; /* Color para texto */
+    --accent: #ff7043; /* Color de acento */
+}
+
+:root {
+    background-color: var(--background);
+}
+
+.spacer20 {
+    height: 50px;
+    background-color: var(--background);
+
+}
